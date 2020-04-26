@@ -3,7 +3,7 @@ import { useRouteMatch, Link } from 'react-router-dom';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import api from '../../services/api';
 
-import logoImg from '../../assets/logo.svg';
+// import logoImg from '../../assets/logo.svg';
 
 import { Header, RepositoryInfo, Issues } from './styles';
 
@@ -12,7 +12,7 @@ interface RepositoryParams {
 }
 
 interface Repository {
-  fullname: string;
+  full_name: string;
   description: string;
   stargazers_count: number;
   forks_count: number;
@@ -51,7 +51,7 @@ const Repository: React.FC = () => {
   return (
     <>
       <Header>
-        <img src={logoImg} alt="Github Explorer" />
+        <img src="" alt="Github Explorer" />
         <Link to="/">
           <FiChevronLeft size={16} />
           Back
@@ -66,7 +66,7 @@ const Repository: React.FC = () => {
               alt={repository.owner.login}
             />
             <div>
-              <strong>{repository.fullname}</strong>
+              <strong>{repository.full_name}</strong>
               <p>{repository.description}</p>
             </div>
           </header>
@@ -92,7 +92,7 @@ const Repository: React.FC = () => {
           <a key={issue.id} href={issue.html_url}>
             <div>
               <strong>{issue.title}</strong>
-              <p>{issue.user}</p>
+              <p>{issue.user.login}</p>
             </div>
 
             <FiChevronRight size={20} />
