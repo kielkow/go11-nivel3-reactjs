@@ -1,4 +1,3 @@
-// / <reference types="react-scripts" />
 import { createGlobalStyle } from 'styled-components';
 
 import githubBackground from '../assets/github-background.svg';

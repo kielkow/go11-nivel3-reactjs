@@ -1,4 +1,3 @@
-// / <reference types="react-scripts" />
 import React, { useState, useEffect, FormEvent } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
