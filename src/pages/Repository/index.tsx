@@ -3,7 +3,7 @@ import { useRouteMatch, Link } from 'react-router-dom';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import api from '../../services/api';
 
-// import logoImg from '../../assets/logo.svg';
+import logo from '../../assets/logo.svg';
 
 import { Header, RepositoryInfo, Issues } from './styles';
 
@@ -51,7 +51,7 @@ const Repository: React.FC = () => {
   return (
     <>
       <Header>
-        <img src="" alt="Github Explorer" />
+        <img src={logo} alt="Github Explorer" />
         <Link to="/">
           <FiChevronLeft size={16} />
           Back
